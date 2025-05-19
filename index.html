@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sobriété numérique</title>
+        <link href="assets/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container bg-dark-subtle p-1 shadow pb-5">
+            <div class="mt-3">
+                <h1 class="text-center">Conception responsable : The Fork</h1>
+            </div>
+
+            <div class="text-center mt-3">
+                <img src="public/images/thefork.webp" class="img-fluid" alt="Logo the fork">
+                <p class="mt-2">
+                    TheFork est une plateforme de réservation de restaurants en ligne. <br />
+                    Elle permet aux utilisateurs de rechercher un établissement, consulter des avis, voir les menus, et réserver une table en quelques clics.
+                </p>
+                <p><strong>Utilité principale :</strong> Simplifier et optimiser le processus de réservation pour les clients et les restaurateurs.</p>
+            </div>
+
+            <div class="mt-5 ms-5 me-5 border border-dark shadow">
+                <div class="text-center">
+                    <h1 class="mt-2">Les ODD</h1>
+                </div>
+                <div class="ms-2 me-5 pt-2 ps-2 pe-3 pb-1">
+                    <h5>Que sont les ODD ?</h5>
+                    <p><strong>ODD</strong> signifie "Objectifs de Développement Durable". Ils couvrent l'intégralité des enjeux de développement dans tous les pays tels que le climat, la biodiversité, l’énergie, l’eau, la pauvreté, l’égalité des genres, la prospérité économique ou encore la paix, l’agriculture, l’éducation, etc. </p>
+                </div>
+                <div class="ms-2 mb-3 me-5 pt-2 ps-2 pe-3 pb-1">
+                    <h3 class="text-center">ODD associés à Thefork</h3>
+                    <div class="row justify-content-center g-4">
+                        <div class="col-auto d-flex justify-content-center">
+                            <div class="card h-100 shadow card-small">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">ODD 9</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        Mettre en place une infrastructure résiliente, promouvoir une industrialisation durable qui profite à tous et encourager l'innovation
+                                    </h6>
+                                    <p class="card-text">
+                                        Service numérique innovant pour un secteur traditionnel.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto d-flex justify-content-center">
+                            <div class="card h-100 shadow card-small">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">ODD 12</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        Établir des modes de consommation et de production durables
+                                    </h6>
+                                    <p class="card-text">
+                                        Meilleure gestion des réservations, permettant de réduire le gaspillage.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-5 ps-5 pe-5">
+                <h1 class="text-center">Conception responsable</h1>
+                <h3>Audit via l'analyse GreenIT</h3>
+                <i>Eco Index : C</i>
+
+                <h5 class="mt-3">Bonnes pratiques</h5>
+                <ul>
+                    <li>Les headers de cache control sont présents</li>
+                    <li>Le site utilise moins de six domaines</li>
+                    <li>Aucune image inutile téléchargée</li>
+                    <li>Le nombre de requêtes HTTP sont limitées</li>
+                    <li>Le nombre de fichiers css est limité</li>
+                    <li>Une police de caractère standard est utilisée</li>
+                    <li>Il n'y a aucun cookie surchargé</li>
+                </ul>
+
+                <h5>Mauvaises pratiques</h5>
+                <ul>
+                    <li>En moyenne 1.72g de co² par visite</li>
+                    <li>Des images sont retaillées dans le navigateur</li>
+                    <li>Pas de feuille print css</li>
+                    <li>433 lignes de css et js ont été trouvées dans le code source html et n'ont donc pas été externalisées</li>
+                </ul>
+
+                <h3 class="mt-5">Audit manuel</h3>
+                <p>Les outils Lighthouse et Ecoindex sont bloqués sur le site Thefork. Nous avons donc effectué un audit manuel du site en plus de l'analyse GreenIT.</p>
+
+                <h5>Points forts relevés</h5>
+                <ul>
+                    <li>Bonne accessibilité aux fonctionnalités</li>
+                    <li>Interface claire et intuitive</li>
+                    <li>Le service Thefork permet de réduire dans une certaine mesure le gaspillage via la planification</li>
+                </ul>
+
+                <h5>Points faibles relevés</h5>
+                <ul>
+                    <li>Peu ou pas de descriptions ARIA</li>
+                    <li>Poids des pages élevé (images non optimisées et en grande quantité)</li>
+                    <li>Beaucoup d'images sont dans des formats plus lourds (ex: .png)</li>
+                    <li>Pas de version légère pour les petites connexions internet ou mobile</li>
+                    <li>Peu sobre (animations inutiles lors de certaines interactions)</li>
+                </ul>
+            </div>
+
+            <hr class="m-5" />
+
+            <div class="container mt-5 ps-5 pe-5">
+                <h1 class="text-center">Recommandations</h1>
+                <ul>
+                    <li>Retailler les images coté serveur afin de réduire la taille des téléchargements</li>
+                    <li>Utiliser le format webp pour les images</li>
+                    <li>Optimiser les assets (css/js) afin de garder le strict minimum, et exporter l'intégralité de ce code</li>
+                    <li>Améliorer l'accessibilité en utilisant de manière constante les descriptions ARIA</li>
+                    <li>Alléger le javascript (actuellement d'une taille de 9600kB, il pourrait être réalistiquement réduit de moitié en rendant le site plus sobre et en supprimant du code inutile ou redondant)</li>
+                    <li>Thefork pourrait davantage inciter à la consommation locale responsable</li>
+                </ul>
+            </div>
+        </div>
+<!--        <script src="assets/bootstrap.bundle.min.js"></script>-->
+    </body>
+</html>
